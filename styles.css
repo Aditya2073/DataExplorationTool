@@ -1,0 +1,187 @@
+/* Reset some default browser styles */
+body, h1, input, button, table, th, td, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling for the entire body */
+}
+
+/* Container styling */
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure container spans full width */
+    width: 100%;
+    margin: 20px auto; /* Center the container */
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Controls row styling */
+.controls-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.control-group {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls styling */
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table container for horizontal scrolling */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    min-width: 100px; /* Ensures horizontal scrolling */
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+th:hover {
+    background-color: #e0e0e0;
+}
+
+/* Pagination styling */
+#pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    max-height: 200px; /* Limit height for vertical scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.page-button {
+    padding: 6px 10px; /* Adjust padding for smaller buttons */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px; /* Adjust font size for smaller buttons */
+    width: auto; /* Set a fixed width for the buttons */
+    text-align: center; /* Center-align text within buttons */
+}
+
+.page-button:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.page-button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    /* Adjust layout for smaller screens */
+    .controls-row {
+        grid-template-columns: 1fr; /* Stack controls vertically */
+    }
+
+    .control-group {
+        padding: 10px;
+        background-color: #f2f2f2;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    select,
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* file upload button */
+input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    padding: 0 16px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+    margin-right: 16px;
+    transition: background-color 200ms;
+  }
+  
+  /* file upload button hover state */
+  input[type="file"]::file-selector-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* file upload button active state */
+  input[type="file"]::file-selector-button:active {
+    background-color: #e5e7eb;
+  }

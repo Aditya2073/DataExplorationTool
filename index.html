@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Exploration Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Exploration Tool</h1>
+        <div class="controls-row">
+            <div class="control-group">
+                <label for="fileInput">Upload CSV File:</label>
+                <input type="file" id="fileInput">
+            </div>
+            <div class="control-group">
+                <label for="rowsPerPageSelect">Rows per Page:</label>
+                <select id="rowsPerPageSelect">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="rangeSortDropdown">Filter Column:</label>
+                <select id="rangeSortDropdown">
+                    <option value="all">All Columns</option>
+                    <!-- Options will be dynamically added via JavaScript -->
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="filterInput">Filter:</label>
+                <input type="text" id="filterInput" placeholder="Search...">
+            </div>
+            <div class="control-group">
+                <button id="sortButton">Sort</button>
+                <button id="exportButton">Export CSV</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table id="dataTable">
+            <thead id="tableHeader"></thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <div id="pagination"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
